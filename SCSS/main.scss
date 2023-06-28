@@ -1,0 +1,179 @@
+// colores
+$color-oansa: #f94144ff;
+$oansa-gradient: linear-gradient(132deg, rgba(249,65,68,1) 0%, rgba(185,23,25,1) 100%);
+$ositos: #f3722cff;
+$ositos-gradient: linear-gradient(132deg, rgba(243,114,44,1) 0%, rgba(249,65,68,1) 100%);
+$chispas: #f9c74fff;
+$chispas-gradient:linear-gradient(326deg, #f8961e 0%, #f9c74f 100%);
+$llamas: #90be6dff;
+$llamas-gradient: linear-gradient(132deg, rgba(144,190,109,1) 0%, rgba(67,170,139,1) 100%);
+$antorchas: #577590ff;
+$antorchas-gradient: linear-gradient(132deg, rgba(67,170,139,1) 0%, rgba(87,117,144,1) 100%);
+$maestros: #f8961eff;
+$juegos: #43aa8b;
+$my-white: #f2f7f1;
+$my-black: #000000;
+
+//fuentes
+$font-tittles: 'Luckiest Guy', cursive;
+$font-body:'Poppins', sans-serif;
+
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: $font-body;
+    background-color: $my-white;
+}
+h1 {
+    font-size: 2.4rem;
+    font-weight: 800;
+}
+h3 {
+    font-size: 1.6rem;
+}
+.chispas {
+    background: $chispas;
+    background: $chispas-gradient;
+}
+
+.navbar {
+    height: 80px; 
+    display: flex;
+    justify-content: right;
+    gap: 20px;
+    padding: 0 16px;
+    .navbar-left, .navbar-right {
+        display: flex;
+        align-items: center;
+    }
+    .navbar-left p {
+        font-family: $font-tittles;
+        font-size: 3rem;
+        color: $color-oansa;
+        margin-left: 24px;
+    }   
+    .navbar-profile-pic {
+        height: 45px;
+        width: 45px;
+        align-items: center;
+        border-radius: 50%;
+        margin-right: 12px ;
+        img{
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+        }    
+    }         
+}
+
+//CARDS
+.white-card {
+    padding: 16px;
+    border-radius: 16px;
+    background: $my-white;
+    box-shadow:  2px 2px 31px #56585648,
+}
+
+.chispas-card {
+    padding: 16px;
+    border-radius: 16px;
+    background: $chispas;
+    background: $chispas-gradient;
+    box-shadow:  2px 2px 31px #38383849,
+}
+
+//MAIN SECTION 
+.main-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .chispas{
+        width: 100%;
+        border-radius: 0 0 calc(28px + 5vw) calc(28px + 5vw);
+        display: flex;
+        flex-direction: column;
+    }
+    .home-maestro-container {
+        width: 100%;
+        min-height: 250px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        .home-maestro {
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 12px 0 48px 0;
+            padding-inline-start: 32px;
+            padding-inline-end: 32px;
+            align-self: center;
+            justify-content: space-around;
+            .bienvenida-maestro {
+                margin: 24px 0;
+                h1{
+                    font-size: calc(16px + 1.5vw);
+                    margin: 0;
+                }
+                p {
+                    margin: 0;
+                    color: #3d3d3d;
+                    font-size: 1.2rem;
+                }
+                .white-card{
+                    border-radius: 30px;
+                }
+            }
+            .home-maestro-puntuacion {
+                width: 100%;
+                max-width: 300px;
+                h3 {
+                    margin: 0;
+                }  
+                .numero-puntuacion {
+                    text-align: center;
+                    font-family: $font-tittles;
+                    font-size: 4rem;
+                    margin: 1rem;
+                }                      
+            }
+        }    
+    }
+    .home-dashboard {
+        width: 80vw;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        grid-auto-rows: minmax(100px, auto);
+        padding-block-start: 36px;
+        font-weight: 700;
+        font-size: calc(1.4rem + 0.5vw);
+        .dasboard-card:hover {
+            background: $llamas;
+            background: $llamas-gradient;
+        }
+        .chispas-card:hover {
+            background: $color-oansa;
+            background: $oansa-gradient;
+            color: $my-white;
+        }
+                
+    }
+}
+footer{
+    height: 80px;
+}
+
+
